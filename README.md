@@ -15,6 +15,7 @@ Ce projet est une base pour une application de gestion de bibliothèque avec Sym
    php bin/console doctrine:database:create
    php bin/console doctrine:migrations:migrate
    ```
+4. Importé les données de test du fichier librairie.sql
 
  ## Utilisation
 
