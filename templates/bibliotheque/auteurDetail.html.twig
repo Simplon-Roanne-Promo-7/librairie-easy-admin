@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Détails de l'auteur</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card" style="background-color: #f8f9fa;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ auteur.nom }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Livres :</h6>
+                    <ul>
+                        {% for livre in auteur.livres %}
+                            <li><a href="{{ path('livre_details', {'id': livre.id}) }}">{{ livre.titre }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="{{ path('accueil') }}" class="btn btn-secondary mt-3">Retour à la liste des livres</a>
+{% endblock %}
